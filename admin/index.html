@@ -77,11 +77,36 @@
             <li class="panel panel-info">
                 <div class="panel-heading">Expérience professionelle</div>
                 <div class="panel-body">Content ...
-
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Ajouter une expérience</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Tout effacer</a></li>
+                    </ul>
+                  </div>
                   <ul id="draggablePanelList1" class="list-unstyled">
                             <li class="panel panel-info">
                                 <div class="panel-heading">Expérience 1</div>
                                 <div class="panel-body">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       Action <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Ajouter une expérience</a></li>
+                                      <li><a href="#">Another action</a></li>
+                                      <li><a href="#">Something else here</a></li>
+                                      <li role="separator" class="divider"></li>
+                                      <li><a href="#">Tout effacer</a></li>
+                                    </ul>
+                                  </div>
+                                  
                                   <label for="resume-experience-1-name">Nom de l'expérience</label>
                                   <input id="resume-experience-1-name" type="text" class="form-control" placeholder="Nom de l'expérience" aria-describedby="basic-addon1">
                                   <label for="resume-experience-1-start">Date début</label>
@@ -96,7 +121,19 @@
                             </li>
                             <li class="panel panel-info">
                                 <div class="panel-heading">Expérience 2</div>
-                                <div class="panel-body"> contenu </div>
+                                <div class="panel-body"> 
+                                  <label for="resume-experience-2-name">Nom de l'expérience</label>
+                                  <input id="resume-experience-2-name" type="text" class="form-control" placeholder="Nom de l'expérience" aria-describedby="basic-addon1">
+                                  <label for="resume-experience-2-start">Date début</label>
+                                  <input id="resume-start-2" type="text" class="form-control" placeholder="Date de début" aria-describedby="basic-addon1">
+                                  <label for="resume-experience-2-end">Date de fin</label>
+                                  <input id="resume-experience-2-end" type="text" class="form-control" placeholder="Date de fin" aria-describedby="basic-addon1">
+                                  <label for="resume-description-2-desc">Description de l'expérience</label>
+                                  <textarea id="resume-description-2-desc" class="form-control" placeholder="Description de l'expérience" ></textarea>
+
+
+
+                                contenu </div>
                             </li>
                   </ul>
 
