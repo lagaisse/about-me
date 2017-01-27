@@ -33,4 +33,27 @@
 
 
 
+        var xp_tpl = $('#experience-template').html();
+        var mis_tpl = $('#mission-template').html();            
+        $(".add-xp").click(function(){
+            //alert("The add-xp was clicked.");
+
+            //var html = Mustache.to_html(template, data);
+            $('#draggablePanelList1').append(xp_tpl);
+            
+            //add handler on add-mission class if it does not already exist
+            $(".add-mission").click(function(){
+                //alert("The add-xp was clicked.");
+
+                //var html = Mustache.to_html(template, data);
+                $('#draggablePanelList2').append(mis_tpl);
+            });
+
+        });
+
+
+
+
     });
+
+

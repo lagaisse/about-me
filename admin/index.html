@@ -77,13 +77,13 @@
             <li class="panel panel-info">
                 <div class="panel-heading">Expérience professionelle</div>
                 <div class="panel-body">Content ...
-                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-primary add-xp">Ajouter une expérience</button>
                   <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        Action <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Ajouter une expérience</a></li>
+                      <li><a href="#" class="add-xp">Ajouter une expérience</a></li>
                       <li><a href="#">Another action</a></li>
                       <li><a href="#">Something else here</a></li>
                       <li role="separator" class="divider"></li>
@@ -91,50 +91,9 @@
                     </ul>
                   </div>
                   <ul id="draggablePanelList1" class="list-unstyled">
-                            <li class="panel panel-info">
-                                <div class="panel-heading">Expérience 1</div>
-                                <div class="panel-body">
-                                  <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       Action <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">Ajouter une expérience</a></li>
-                                      <li><a href="#">Another action</a></li>
-                                      <li><a href="#">Something else here</a></li>
-                                      <li role="separator" class="divider"></li>
-                                      <li><a href="#">Tout effacer</a></li>
-                                    </ul>
-                                  </div>
-                                  
-                                  <label for="resume-experience-1-name">Nom de l'expérience</label>
-                                  <input id="resume-experience-1-name" type="text" class="form-control" placeholder="Nom de l'expérience" aria-describedby="basic-addon1">
-                                  <label for="resume-experience-1-start">Date début</label>
-                                  <input id="resume-start-1" type="text" class="form-control" placeholder="Date de début" aria-describedby="basic-addon1">
-                                  <label for="resume-experience-1-end">Date de fin</label>
-                                  <input id="resume-experience-1-end" type="text" class="form-control" placeholder="Date de fin" aria-describedby="basic-addon1">
-                                  <label for="resume-description-1-desc">Description de l'expérience</label>
-                                  <textarea id="resume-description-1-desc" class="form-control" placeholder="Description de l'expérience" ></textarea>
+                  les expériences
 
 
-                                contenu </div>
-                            </li>
-                            <li class="panel panel-info">
-                                <div class="panel-heading">Expérience 2</div>
-                                <div class="panel-body"> 
-                                  <label for="resume-experience-2-name">Nom de l'expérience</label>
-                                  <input id="resume-experience-2-name" type="text" class="form-control" placeholder="Nom de l'expérience" aria-describedby="basic-addon1">
-                                  <label for="resume-experience-2-start">Date début</label>
-                                  <input id="resume-start-2" type="text" class="form-control" placeholder="Date de début" aria-describedby="basic-addon1">
-                                  <label for="resume-experience-2-end">Date de fin</label>
-                                  <input id="resume-experience-2-end" type="text" class="form-control" placeholder="Date de fin" aria-describedby="basic-addon1">
-                                  <label for="resume-description-2-desc">Description de l'expérience</label>
-                                  <textarea id="resume-description-2-desc" class="form-control" placeholder="Description de l'expérience" ></textarea>
-
-
-
-                                contenu </div>
-                            </li>
                   </ul>
 
                 </div>
@@ -163,7 +122,53 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
     <script src="admin.js"></script>
+    <script id="experience-template" type="text/template">
+      <li class="panel panel-info">
+          <div class="panel-heading">Expérience 1</div>
+          <div class="panel-body">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary add-mission">Ajouter une mission</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Action <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="add-mission">Ajouter une mission</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Tout effacer</a></li>
+              </ul>
+            </div>
+            
+            <label for="resume-experience-1-name">Nom de l'expérience</label>
+            <input id="resume-experience-1-name" type="text" class="form-control" placeholder="Nom de l'expérience" aria-describedby="basic-addon1">
+            <label for="resume-experience-1-start">Date début</label>
+            <input id="resume-experience-1-start" type="text" class="form-control" placeholder="Date de début" aria-describedby="basic-addon1">
+            <label for="resume-experience-1-end">Date de fin</label>
+            <input id="resume-experience-1-end" type="text" class="form-control" placeholder="Date de fin" aria-describedby="basic-addon1">
+            <label for="resume-description-1-desc">Description de l'expérience</label>
+            <textarea id="resume-description-1-desc" class="form-control" placeholder="Description de l'expérience" ></textarea>
+            <ul id="draggablePanelList2" class="list-unstyled">missions</ul>
+          </div>
+      </li>
+
+    </script>
+    <script id="mission-template" type="text/template">
+      <li class="panel panel-info">
+          <div class="panel-heading">Mission 1</div>
+          <div class="panel-body">    
+            <label for="resume-mission-1-name">Nom de la mission</label>
+            <input id="resume-mission-1-name" type="text" class="form-control" placeholder="Nom de la mission" aria-describedby="basic-addon1">
+            <label for="resume-mission-1-duree">Durée</label>
+            <input id="resume-mission-1-duree" type="text" class="form-control" placeholder="Durée" aria-describedby="basic-addon1">
+            <label for="resume-description-1-desc">Description de la mission</label>
+            <textarea id="resume-description-1-desc" class="form-control" placeholder="Description de la mission" ></textarea> </div>
+      </li>
+    </script>
 
   </body>
 </html>
